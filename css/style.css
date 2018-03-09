@@ -1,0 +1,106 @@
+:root {
+    --color: #27C7AB;
+}
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1150px;
+    margin: 0 auto;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.page-header {
+    background: #000;
+    height: 40px;
+}
+.page-logo {
+    float: left;
+}
+.page-logo__link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 40px;
+    display: block;
+}
+.page-logo__link span{
+    color: var(--color);
+}
+.page-nav {
+    float: right;
+}
+
+.page-nav-list {}
+.page-nav-list li {
+    float: left;
+    position: relative;
+}
+.page-nav-list a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 25px;
+    display: block;
+}
+.page-nav-list a:hover {
+    color: var(--color);
+}
+.page-nav-list li:hover > a {
+    color: var(--color);
+}
+.page-nav-sublist {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background: black;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 0.5s all;
+    padding: 10px 0;
+}
+.page-nav-list li:hover .page-nav-sublist {
+    opacity: 1;
+    visibility: visible;
+}
+.page-nav-sublist:before {
+    content:'';
+    width: 20px;
+    height: 20px;
+    background: black;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%)rotate(45deg);
+}
+.page-nav-sublist:after {
+    content: "";
+    background: none;
+    height: 20px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -20px;
+}
+.page-nav-sublist a {
+    font-weight: normal;
+    text-transform: none;
+
+}
